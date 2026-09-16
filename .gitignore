@@ -1,0 +1,23 @@
+# your data never goes to git in the public template — keep your real copy in a private repo
+profile/preferences.json
+profile/master-resume.md
+profile/certifications.md
+profile/story-bank.md
+profile/career-context.md
+profile/achievements.md
+profile/linkedin-audit.md
+profile/requirements.md
+profile/outputs/
+profile/study/*
+!profile/study/.gitkeep
+data/*
+!data/secrets.example.json
+reports/*
+!reports/.gitkeep
+jobs/*
+!jobs/.gitkeep
+inbox/*
+!inbox/.gitkeep
+node_modules/
+.DS_Store
+*.tmp

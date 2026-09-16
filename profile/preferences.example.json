@@ -1,0 +1,50 @@
+{
+  "_comment": "Copy to preferences.json and edit. Every field is read by hunt.mjs and the Claude skills.",
+  "candidate": {
+    "name": "Your Name",
+    "email": "you@example.com",
+    "phone": "+61 400 000 000",
+    "linkedin": "https://www.linkedin.com/in/your-handle/",
+    "location": "Perth, WA",
+    "work_rights": "citizen | permanent_resident | visa",
+    "years_full_time_experience": 2,
+    "graduated": "2023-12",
+    "certifications_in_progress": []
+  },
+  "locations": {
+    "primary": ["Perth WA"],
+    "also_consider": [],
+    "relocate_for_right_role": ["Sydney NSW", "Melbourne VIC"],
+    "exclude": [],
+    "country_regex": "perth|sydney|melbourne|brisbane|canberra|adelaide|hobart|darwin|australia|\\bwa\\b|\\bnsw\\b|\\bvic\\b|\\bqld\\b",
+    "city_regex": "perth|sydney|melbourne|brisbane|canberra|adelaide|hobart|darwin",
+    "_note": "primary[0] is the home city for insights; the regexes define 'in my country' for reports and the dashboard."
+  },
+  "target_roles": ["AI Engineer", "Forward Deployed Engineer", "Solutions Engineer", "Technology Consultant", "Data Scientist", "Business Analyst"],
+  "search_queries": ["AI engineer", "forward deployed engineer", "generative AI", "solutions engineer", "technology consultant", "graduate program"],
+  "keywords_boost": ["AI", "agent", "LLM", "Python", "consulting", "graduate", "junior"],
+  "keywords_penalty": ["senior", "principal", "lead", "manager", "director", "head of", "10+ years", "8+ years"],
+  "hard_exclude_titles": ["nurse", "driver", "sales consultant", "recruitment consultant", "customer service"],
+  "industries_of_interest": ["Consulting", "AI-native companies", "Enterprise SaaS"],
+  "dream_companies": ["Anthropic", "OpenAI", "McKinsey", "BCG"],
+  "salary_floor_aud": null,
+  "max_days_old": 30,
+  "seniority": { "min_years": 0, "max_years": 5, "_rule": "A years line is a preference, not a wall. Only 8+ years / principal / staff / manager titles are treated as out of reach." },
+  "priority_model": {
+    "_rule": "Priority (P1/P2/P3) answers 'is this worth my effort' — brand direction vs my current employer, interest alignment, pay. Fit (Strong/Good/Stretch/Skip) answers 'can I get it'. They are separate.",
+    "current_package_aud": null,
+    "company_tiers": {
+      "_note": "Relative to your current employer. tier1 = step up; tier2 = lateral; tier3 = smaller/unknown (step down). Unlisted = tier3.",
+      "tier1": ["McKinsey", "BCG", "Bain", "Anthropic", "OpenAI", "Google", "Microsoft"],
+      "tier2": ["Deloitte", "Accenture", "PwC", "EY", "Oracle", "SAP"],
+      "tier3": []
+    },
+    "interest": {
+      "high": ["forward deployed", "applied ai", "ai engineer", "ai consultant", "agentic", "llm"],
+      "medium": ["data scientist", "solutions engineer", "technology consultant"],
+      "low": ["business analyst", "data analyst", "support", "sales", "recruit"]
+    },
+    "stay_go_factors": { "stay": ["stable income", "brand on the resume"], "go": ["the work I want is not the job here"], "interview_line": "A neutral, factual sentence for 'why are you leaving?'" },
+    "watchlist": []
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "career-os",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "A job-hunting agent for Claude Code: 11 job sources, fit + priority scoring, resume tailoring to PDF/DOCX, interview prep, a local dashboard, and slash-command skills.",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "setup": "node tools/setup.mjs",
+    "hunt": "node hunt.mjs",
+    "hunt:new": "node hunt.mjs --new-only --details 15",
+    "refresh": "bash tools/refresh.sh",
+    "render": "node tools/render.mjs",
+    "dashboard": "node tools/dashboard.mjs",
+    "insights": "node tools/insights.mjs",
+    "details": "node tools/details.mjs",
+    "rescore": "node tools/rescore.mjs",
+    "shortlist": "node tools/shortlist.mjs",
+    "recheck": "node tools/recheck.mjs",
+    "track": "node tools/track.mjs",
+    "test": "node tools/test.mjs",
+    "test:offline": "node tools/test.mjs --offline"
+  },
+  "dependencies": {
+    "docx": "^9.7.1"
+  },
+  "repository": "github.com:leoleolro/career-os",
+  "license": "MIT",
+  "keywords": [
+    "job-search",
+    "claude-code",
+    "agent",
+    "resume",
+    "career",
+    "automation"
+  ]
+}

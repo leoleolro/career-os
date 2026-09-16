@@ -1,0 +1,25 @@
+{
+  "_comment": "Phenom People career sites read by sources/phenom.mjs. One entry per tenant. `countries` is the server-side country facet filter (jobs outside it are dropped unless they match the hunt location). Find lang/country/site/pageId by opening <base>/<site>/search-results in a browser and reading the POST /widgets request body in DevTools. Set enabled:false to skip a site.",
+  "defaults": {
+    "countries": ["Australia"],
+    "pageId": "page11",
+    "siteType": "external",
+    "pageSize": 50,
+    "maxPages": 4,
+    "minGapMs": 1500
+  },
+  "sites": [
+    {
+      "key": "bcg",
+      "company": "BCG",
+      "base": "https://careers.bcg.com",
+      "lang": "en_global",
+      "country": "global",
+      "site": "global/en",
+      "pageId": "page11",
+      "countries": ["Australia"],
+      "enabled": true,
+      "_verified": "2026-09-12: POST /widgets refineSearch returns 10 AU jobs; job pages embed phApp.ddo; /api/apply/v2/jobs answers 'Tenant not identified' (unusable)"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+[
+  {
+    "_comment": "Oracle Recruiting Cloud (Fusion HCM Candidate Experience) tenants read by sources/oracle-orc.mjs. One entry per career site: name (short key), host (the *.oraclecloud.com REST host), site (SiteNumber, e.g. CX_1001), company (display name). Optional: siteUrlName (SiteURLName used in public job URLs when it differs from SiteNumber), urlBase (custom careers domain, default https://{host}/hcmUI/CandidateExperience), country (facet typeahead term, default Australia), dream (true = keep every job in the country, not just the hunt location), enabled:false to skip. Find host/site by opening the careers site and reading the /hcmRestApi/resources/latest/recruitingCEJobRequisitions request in DevTools. Tested 2026-09-12 and NOT on ORC: your current employer AU (SmartRecruiters); Fortescue, South32, Northern Star, Synergy, Western Power (SuccessFactors); Mineral Resources, UWA, Kinetic IT (PageUp); Alcoa, Bankwest, HBF, RAC WA, Bunnings, Telstra (Workday); Newmont, Ventia (Phenom); Water Corporation (LiveHire); Main Roads WA (jobs.wa.gov.au). Woodside, Perth Airport, Horizon Power block scripted fetches (403); Curtin careers URL not found. Stantec (hdhl.fa.us6) and ATCO (eezy.fa.ca2) tenants exist but list no Australian jobs; the 'PWC Careers' tenant (fa-etuc) is Public Works Commission NC, not PwC."
+  },
+  {
+    "name": "oracle",
+    "company": "Oracle",
+    "host": "eeho.fa.us2.oraclecloud.com",
+    "site": "CX_45001",
+    "siteUrlName": "jobsearch",
+    "urlBase": "https://careers.oracle.com",
+    "country": "Australia",
+    "dream": true,
+    "enabled": true,
+    "_verified": "2026-09-12: 2190 jobs total, 24 in Australia (North Ryde/Melbourne); Australia facet id 300000000106677; job URL https://careers.oracle.com/en/sites/jobsearch/job/{Id} answers 200"
+  },
+  {
+    "name": "westpac",
+    "company": "Westpac Group",
+    "host": "ebuu.fa.ap1.oraclecloud.com",
+    "site": "CX",
+    "enabled": true,
+    "_verified": "2026-09-12: 139 jobs, 133 in Australia, 8 in Perth; keyword 'AI engineer' returns 18"
+  },
+  {
+    "name": "suncorp",
+    "company": "Suncorp",
+    "host": "fa-evew-saasfaprod1.fa.ocs.oraclecloud.com",
+    "site": "CX_1",
+    "enabled": true,
+    "_verified": "2026-09-12: 42 jobs, 39 in Australia, 3 in Perth"
+  },
+  {
+    "name": "wood",
+    "company": "Wood",
+    "host": "ehif.fa.em2.oraclecloud.com",
+    "site": "CX_1",
+    "enabled": true,
+    "_verified": "2026-09-12: 989 jobs, 59 in Australia, 4 in Perth"
+  },
+  {
+    "name": "downer",
+    "company": "Downer",
+    "host": "fa-exfs-saasfaprod1.fa.ocs.oraclecloud.com",
+    "site": "CX_2",
+    "siteUrlName": "CareersAtDowner",
+    "enabled": true,
+    "_verified": "2026-09-12: 548 jobs, 425 in Australia, 16 in Perth; /sites/CareersAtDowner/job/{Id} answers 200"
+  },
+  {
+    "name": "cimic",
+    "company": "CIMIC Group",
+    "host": "elgl.fa.ap1.oraclecloud.com",
+    "site": "CX_1001",
+    "enabled": true,
+    "_verified": "2026-09-12: 75 jobs, 34 in Australia, 12 in Perth (Sedgman/CPB/Thiess have their own sites CX_2004/CX_1002/CX_1006 on the same host)"
+  },
+  {
+    "name": "ghd",
+    "company": "GHD",
+    "host": "ejov.fa.ca2.oraclecloud.com",
+    "site": "CX",
+    "enabled": true,
+    "_verified": "2026-09-12: 610 jobs, 61 in Australia, 22 in Perth (incl. GHD Graduate Program 2026/27 - Perth)"
+  },
+  {
+    "name": "wsp",
+    "company": "WSP",
+    "host": "emit.fa.ca3.oraclecloud.com",
+    "site": "CX_2001",
+    "enabled": true,
+    "_verified": "2026-09-12: 4005 jobs, 203 in Australia, 38 in Perth"
+  },
+  {
+    "name": "australiansuper",
+    "company": "AustralianSuper",
+    "host": "ejjl.fa.ap1.oraclecloud.com",
+    "site": "CX_1",
+    "enabled": false,
+    "_verified": "2026-09-12: works (35 jobs, 28 in Australia) but Melbourne/Sydney only — enable if relocating"
+  },
+  {
+    "name": "amp",
+    "company": "AMP",
+    "host": "fa-esow-saasfaprod1.fa.ocs.oraclecloud.com",
+    "site": "CX_1",
+    "enabled": false,
+    "_verified": "2026-09-12: works (35 jobs, all Australia) but Sydney/Melbourne only; has a Technology Graduate Program — enable if relocating"
+  },
+  {
+    "name": "jpmc",
+    "company": "JPMorgan Chase",
+    "host": "jpmc.fa.oraclecloud.com",
+    "site": "CX_1001",
+    "enabled": false,
+    "_verified": "2026-09-12: works (7437 jobs, 24 in Australia, all Sydney) — enable if relocating"
+  }
+]
