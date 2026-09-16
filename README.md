@@ -7,7 +7,7 @@ Built by [Leo Long](https://github.com/leoleolro) while running his own search. 
 ## What it does
 | Layer | What |
 |---|---|
-| **Hunt** | Seek's JSON API, LinkedIn's guest endpoint, BCG (Phenom), Oracle Recruiting Cloud tenants, Greenhouse/Lever/Ashby boards (Anthropic, OpenAI, Atlassian…), GradConnection, McKinsey (browser check), Adzuna (free key), Indeed (browser only). Polite per-host pacing, on-disk cache, parallel sources, dedupe across sources with company aliasing. |
+| **Hunt** | Seek's JSON API, LinkedIn's guest endpoint, BCG (Phenom), Oracle Recruiting Cloud tenants, Greenhouse/Lever/Ashby boards (Anthropic, OpenAI, Atlassian…), GradConnection, JobsWA (WA Government), McKinsey and APSJobs (browser checks), Adzuna (free key), Indeed (browser only). Polite per-host pacing, on-disk cache, parallel sources, dedupe across sources with company aliasing. |
 | **Score** | `prescore` (title match, keywords, location, freshness, years asked) orders the queue. Claude then rates **fit**. `upside()` computes **priority** from your own tiers: brand direction vs your current employer, interest, pay. |
 | **Tailor** | `profile/master-resume.md` → job-specific `resume.md` + `cover-letter.md` → PDF (headless Chrome) + DOCX. `--compact` for one page; `--merge` to append a transcript for one-file applications. Hard rule: no em dashes. |
 | **Prepare** | `brief.md` per job (verdict, suits-you, positioning, trajectory, company, process, risks), interview packs with predicted questions and STAR answers from your story bank, company research, networking drafts (never sent). |

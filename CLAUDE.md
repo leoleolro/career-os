@@ -14,7 +14,7 @@ This folder is a career agent. You (Claude Code) are the reasoning half; the Nod
 ## Layout
 ```
 profile/        master-resume.md · preferences.json (search prefs + priority_model) · certifications.md · story-bank.md · career-context.md · achievements.md · study/
-sources/        one adapter per job source + config/ (seek, linkedin, phenom, oracle-orc, greenhouse, lever, ashby, gradconnection, mckinsey, adzuna, indeed)
+sources/        one adapter per job source + config/ (seek, linkedin, phenom, oracle-orc, greenhouse, lever, ashby, gradconnection, mckinsey [browser], wagov [WA Government], apsjobs [browser], adzuna, indeed [browser])
 lib/            schema.mjs (Job, normalizeJob, dedupe, closingDate) · http.mjs (polite fetch, cache) · store.mjs · score.mjs (prescore + upside/priority) · insights.mjs · md.mjs
 hunt.mjs        sources × queries → data/jobs.json + reports/hunt-<date>.md   (--source, --query, --location, --new-only, --details N, --dry, --top)
 tools/          render.mjs (resume.md → PDF/DOCX; --compact for one page; --merge for one-file applications) · dashboard.mjs · track.mjs · details.mjs · rescore.mjs · insights.mjs · shortlist.mjs · recheck.mjs · refresh.sh · setup.mjs · test.mjs

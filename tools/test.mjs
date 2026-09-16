@@ -30,7 +30,7 @@ if (!process.argv.includes('--offline')) {
     const args = ['hunt.mjs', '--dry', '--source', s.name, '--query', 'AI', '--location', 'Perth WA', '--limit', '3', '--source-timeout', '90000'];
     const out = await new Promise((res) => { const p = spawn(process.execPath, args, { cwd: ROOT }); let o = ''; p.stdout.on('data', (d) => (o += d)); p.on('close', (code) => res({ code, o })); setTimeout(() => { p.kill(); res({ code: -1, o }); }, 100000); });
     let parsed = null; try { parsed = JSON.parse(out.o.slice(out.o.indexOf('{'))); } catch { /* */ }
-    const expectEmpty = ['adzuna', 'indeed', 'mckinsey'].includes(s.name);
+    const expectEmpty = ['adzuna', 'indeed', 'mckinsey', 'apsjobs'].includes(s.name);
     ok(parsed && (expectEmpty || parsed.fetched > 0) && parsed.errors.length === 0, `adapter ${s.name} (${parsed ? `${parsed.fetched} fetched, ${parsed.errors.length} errors` : 'no JSON'})`);
     console.error(`  ${s.name}: ${parsed ? parsed.fetched : '?'} fetched`);
   }

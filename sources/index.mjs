@@ -6,7 +6,7 @@ import * as linkedin from './linkedin.mjs';
 const registry = [seek, linkedin];
 
 // Optional adapters — loaded if present so a half-built adapter never breaks the hunt.
-for (const n of ['phenom', 'workday', 'greenhouse', 'lever', 'ashby', 'oracle-orc', 'smartrecruiters', 'gradconnection', 'mckinsey', 'adzuna', 'jooble', 'indeed']) {
+for (const n of ['phenom', 'workday', 'greenhouse', 'lever', 'ashby', 'oracle-orc', 'smartrecruiters', 'gradconnection', 'mckinsey', 'wagov', 'apsjobs', 'adzuna', 'jooble', 'indeed']) {
   try { const m = await import(`./${n}.mjs`); if (m.search && m.name) registry.push(m); } catch (e) { if (!/Cannot find module|ERR_MODULE_NOT_FOUND/.test(String(e))) console.error(`[sources] ${n} failed to load:`, e.message); }
 }
 
