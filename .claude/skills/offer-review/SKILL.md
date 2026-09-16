@@ -6,7 +6,7 @@ description: Decode and benchmark a job offer (Australian employment specifics),
 # /offer-review <file in inbox/ | pasted terms>
 
 ## 1. Extract the terms into a table
-Base salary (ex/inc super — AU super guarantee is 12% from 1 July 2025; confirm which the letter means), bonus (target %, discretionary?), equity/RSUs (vesting, cliff), sign-on, relocation, allowances, leave (annual/personal/parental), probation, notice period (both directions), restraint of trade / non-compete / non-solicit (duration, geography — enforceability in AU is limited but still matters), IP/moonlighting clauses (matters for the candidate's side projects and Pai Pai Films), remote/hybrid terms, start date, title/level, review cycle, training budget, visa/citizenship clauses (n/a — Australian citizen), any clawbacks.
+Base salary (ex/inc super — AU super guarantee is 12% from 1 July 2025; confirm which the letter means), bonus (target %, discretionary?), equity/RSUs (vesting, cliff), sign-on, relocation, allowances, leave (annual/personal/parental), probation, notice period (both directions), restraint of trade / non-compete / non-solicit (duration, geography — enforceability in AU is limited but still matters), IP/moonlighting clauses (matters if you have side projects or a business), remote/hybrid terms, start date, title/level, review cycle, training budget, visa/citizenship clauses (n/a — Australian citizen), any clawbacks.
 Flag anything missing or ambiguous as a question for the employer.
 
 ## 2. Benchmark
