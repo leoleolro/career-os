@@ -8,7 +8,7 @@ import { readFile, writeFile } from 'node:fs/promises';
 import { loadJobs } from '../lib/store.mjs';
 
 const ROOT = fileURLToPath(new URL('../', import.meta.url));
-const prefs = JSON.parse(await readFile(ROOT + 'profile/preferences.json', 'utf8'));
+const prefs = JSON.parse(await readFile(ROOT + 'profile/preferences.json', 'utf8').catch(() => readFile(ROOT + 'profile/preferences.example.json', 'utf8')));
 const db = await loadJobs();
 const jobs = Object.values(db.jobs).filter((j) => (j.prescore ?? 1) > 0);
 const HOME = String(prefs.locations?.primary?.[0] || 'Perth').split(/[ ,]/)[0];

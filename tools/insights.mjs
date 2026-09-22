@@ -8,7 +8,7 @@ import { computeInsights } from '../lib/insights.mjs';
 
 const ROOT = fileURLToPath(new URL('../', import.meta.url));
 const db = await loadJobs();
-const prefs = JSON.parse(await readFile(ROOT + 'profile/preferences.json', 'utf8'));
+const prefs = JSON.parse(await readFile(ROOT + 'profile/preferences.json', 'utf8').catch(() => readFile(ROOT + 'profile/preferences.example.json', 'utf8')));
 const master = (await readFile(ROOT + 'profile/master-resume.md', 'utf8')).toLowerCase();
 const today = new Date().toISOString().slice(0, 10);
 const jobs = Object.values(db.jobs);

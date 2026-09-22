@@ -7,7 +7,7 @@ import { prescore, yearsAsked } from '../lib/score.mjs';
 import { sources } from '../sources/index.mjs';
 import { readFile } from 'node:fs/promises';
 const ROOT = fileURLToPath(new URL('../', import.meta.url));
-const prefs = JSON.parse(await readFile(ROOT + 'profile/preferences.json', 'utf8'));
+const prefs = JSON.parse(await readFile(ROOT + 'profile/preferences.json', 'utf8').catch(() => readFile(ROOT + 'profile/preferences.example.json', 'utf8'))); // fresh clone: fall back to the example until `npm run setup`
 let pass = 0, fail = 0;
 const ok = (cond, msg) => { if (cond) { pass++; } else { fail++; console.error('FAIL:', msg); } };
 

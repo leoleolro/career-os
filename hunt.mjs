@@ -22,7 +22,7 @@ const flag = (n) => args.includes(n);
 const opt = (n, d) => { const i = args.indexOf(n); return i >= 0 ? args[i + 1] : d; };
 
 const ROOT = fileURLToPath(new URL('./', import.meta.url));
-const prefs = JSON.parse(await readFile(ROOT + 'profile/preferences.json', 'utf8'));
+const prefs = JSON.parse(await readFile(ROOT + 'profile/preferences.json', 'utf8').catch(() => readFile(ROOT + 'profile/preferences.example.json', 'utf8')));
 const today = new Date().toISOString().slice(0, 10);
 const onlySource = opt('--source');
 const minScore = Number(opt('--min-score', 35));
