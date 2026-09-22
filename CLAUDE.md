@@ -26,7 +26,7 @@ inbox/          drop JDs, transcripts, offer letters, question banks here for in
 ```
 
 ## Slash commands
-`/hunt` (fetch, rate fit, shortlist by priority) · `/tailor <url|jobs/slug>` (JD → brief + resume + cover letter → PDF/DOCX) · `/interview-prep <slug> [mock]` · `/career-path` · `/network` · `/offer-review` · `/log <what you did>` · `/apply <slug>` (stops before submit) · `/track` · `/weekly` · `/prefs` · `/inbox` (Gmail, draft only) · `/research <company>` · `/study`
+`/hunt` (fetch, rate fit, shortlist by priority) · `/tailor <url|jobs/slug>` (JD → brief + resume + cover letter → PDF/DOCX) · `/interview-prep <slug> [mock]` · `/career-path` · `/network` · `/offer-review` · `/log <what you did>` · `/apply <slug>` (stops before submit) · `/track` · `/weekly` · `/prefs` · `/inbox` (Gmail, draft only) · `/research <company>` · `/decide <question>` (deep career decision: live research, graded sources, kill criteria, decision log) · `/study`
 
 ## Concepts
 - **Fit** (Strong / Good / Stretch / Skip) = can the candidate get it. Rated by Claude from full descriptions. A "N+ years" line is a preference, not a wall; only 8+ years, principal/staff/manager titles, wrong domain or a true hard gate (citizenship, clearance) make a Skip.
